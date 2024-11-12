@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPページ</title>
+    <style>
+        /* 全体背景とスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('Main.jpg'); /* 背景画像をそのまま表示 */
+            background-size: cover; /* 画面全体に合わせて背景をカバー */
+            background-position: center; /* 背景画像を中央に配置 */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* 背景画像を固定 */
+            text-align: center;
+            color: #000;
+        }
+
+        /* メインコンテナ */
+        .container {
+            width: 90%; /* 画面サイズに応じて幅を調整 */
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 150px 20px 20px; /* 上部パディングを少し減らして調整 */
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+
+        /* 動画スペース */
+        .video-space {
+            width: 100%;
+            max-width: 580px;
+            height: auto;
+            background-color: #cccccc;
+            margin: 15px auto; /* 動画スペースの上下の余白を少し減らしました */
+            position: relative;
+        }
+
+        /* ボタンの設定 */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* ボタンを中央に配置 */
+            margin-top: 10px;
+            gap: 10px; /* ボタンの間にスペースを設定 */
+        }
+
+        .button {
+            width: 48%; /* ボタンの幅を50%に設定して2列表示 */
+            height: 100px;
+            background-color: #5451E6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Hiragino Maru Gothic Pro', 'Noto Sans JP', sans-serif;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #3b38b1;
+        }
+
+        /* メディアクエリでモバイル対応 */
+        @media (max-width: 600px) {
+            .container {
+                padding-top: 120px; /* モバイルでの上部パディングをさらに少し減らしました */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- コンテンツ -->
+    <div class="container">
+        
+        <!-- 動画スペース -->
+        <div class="video-space">
+            <video width="100%" controls autoplay muted loop>
+                <source src="動画1.mp4" type="video/mp4">
+                お使いのブラウザは動画タグに対応していません。
+            </video>
+        </div>
+
+        <!-- ボタンエリア -->
+        <div class="button-container">
+            <a href="農産.html" class="button" target="_blank">農産</a>
+            <a href="水産.html" class="button" target="_blank">水産</a>
+            <a href="畜産.html" class="button" target="_blank">畜産</a>
+            <a href="グロ.html" class="button" target="_blank">グロッサリー</a>
+            <a href="デイリー.html" class="button" target="_blank">デイリー</a>
+            <a href="デリカ.html" class="button" target="_blank">デリカ</a>
+        </div>
+    </div>
+
+</body>
+</html>
